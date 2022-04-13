@@ -46,8 +46,8 @@
       </p>
       <div x-show="openbox" class="inset-0 fixed bg-stone-100 w-full h-full opacity-50"></div>
       <div x-show="openbox" @click.away="openbox = false"
-        class=" bg-white shadow-[0_-4px_8px_rgba(0,0,0,0.08)] z-10  w-full h-auto right-0 left-0 bottom-0 fixed  rounded-t-3xl   ">
-        <div class="px-9 py-7 w-1/2">
+        class=" bg-white shadow-[0_-4px_8px_rgba(0,0,0,0.08)] z-10  w-full h-auto max-h-[75%] overflow-auto right-0 left-0 bottom-0 fixed  rounded-t-3xl   ">
+        <div class="px-9 py-7 w-1/2 ">
           <div class="text-orange-400 text-lg font-bold mb-5">فیلتر</div>
           <div x-data="{flag:true}">
             <!-- accourdion brand header -->
@@ -144,7 +144,13 @@
               </label>
             </div>
           </div>
-        </div>
+         
+        </div> 
+        <!-- ok nok botton -->
+          <div class="md:hidden flex  flex-row items-center justify-evenly  gap-x-2 mx-8 bottom-0 mb-4 ">
+            <button class="w-44 h-14  bg-orange-400 text-slate-100 rounded-md">تایید</button>
+            <button class="w-44 h-14  bg-orange-100 text-orange-400 border-orange-600 border-2 rounded-md ">لغو فیلتر</button>
+          </div>
       </div>
     </div>
   </div>
